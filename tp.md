@@ -1,5 +1,11 @@
 - Authors : BfoR, Multun (§ Bash )
 
+```
+$ git clone http://github.com/bifore/tp_linux
+$ cd tp_linux
+$ ./update.sh
+```
+
 ## La superbe géniale magnifique documentation
 
 Si vous ne comprenez pas une commande, vous pouvez taper:
