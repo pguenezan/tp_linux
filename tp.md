@@ -117,7 +117,7 @@ De plus si vous voulez effacer un dossier et son contenu récursivement, il
 suffit d'ajouter l'option `-r` à la commande `rm`.
 
 Comme vous l'avez sans doute remarqué, vous ne pouvez pas faire `Ctrl + c,
-Ctrl + v`, pour copier un fichier. Pour copier un ficher sur linux, il faut
+Ctrl + v`, pour copier un fichier. Pour copier un fichier sur linux, il faut
 taper:
 ```
 $ cp NOM_DU_FICHIER_SOURCE NOM_DU_NOUVEAU_FICHIER
@@ -162,7 +162,7 @@ ligne )
 Maintenant que vous savez utiliser `grep`, vous pouvez essayer de chercher le
 flag dans le dossier `exo3`.
 
-Petit indice, si vous voulez chercher le mot `sapin` du ficher `ours` il
+Petit indice, si vous voulez chercher le mot `sapin` du fichier `ours` il
 faut taper la commande:
 ```
 $ grep sapin ours
