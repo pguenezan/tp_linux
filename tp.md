@@ -1,9 +1,9 @@
 - Authors : BfoR, Multun (§ Bash )
 
 ```
-$ git clone http://github.com/bifore/tp_linux
+$ wget http://transfer.guenezan.me/XXXXX/tp_linux.zip
+$ unzip tp_linux
 $ cd tp_linux
-$ ./update.sh
 ```
 
 ## La superbe géniale magnifique documentation
