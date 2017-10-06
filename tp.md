@@ -10,15 +10,14 @@ $ cd tp_linux
 |-----------|------------------------------|
 | niveau 1  | voyage voyage                |
 | niveau 2  | EXÉCUTION                    |
-| niveau 3  | Une œuvre d'AUTHEUR          |
+| niveau 3  | Une œuvre d'AUTHORS          |
 | niveau 4  | À la recherche du flag perdu |
 | niveau 5  | On dit s'il vous plaît       |
 | niveau 6  | Tartiflette                  |
-| niveau 7  | Curly                        |
-| niveau 8  | Passe-passe                  |
-| niveau 9  | maknifique                   |
-| niveau 10 | globiblob                    |
-| niveau 11 | Trace me                     |
+| niveau 7  | Passe-passe                  |
+| niveau 8  | maknifique                   |
+| niveau 9  | globiblob                    |
+| niveau 10 | Trace me                     |
 | niveau 42 | xorifiquement votre          |
 
 
@@ -57,18 +56,18 @@ Si vous voulez fermer votre fenêtre appuyer sur:
 <Mod> + Shift + q
 ```
 
-De plus, si vous voulez lancer un programme graphique tapez:
+Si vous voulez lancer un programme graphique tapez:
 ```
 <Mod> + d, puis tapez firefox par exemple
 ```
 
-Enfin, pour changer de bureau, tapez:
+Pour changer de bureau, tapez:
 
 ```
 <Mod> + le numéro du bureau
 ```
 
-Enfin, pour bouger une fenêtre vers un nouveau bureau, tapez:
+Pour bouger une fenêtre vers un nouveau bureau, tapez:
 
 ```
 <Mod> + <Shift> + le numéro du bureau
@@ -88,7 +87,7 @@ Comme nous avons maintenant un terminal, il est temps de commencer.
 Un petit lexique des commandes utiles:
 
  - `pwd` permet d'afficher le chemin du dossier actuel.
- - `ls' permet de lister les éléments du dossier actuel.
+ - `ls` permet de lister les éléments du dossier actuel.
  - `mkdir DOSSIER` permet de créer un dossier nommé "DOSSIER" dans le dossier courant.
  - `rmdir DOSSIER` permet de supprimer un dossier vide.
  - `touch FICHIER` permet de créer un fichier vide.
@@ -175,7 +174,7 @@ vous pouvez utiliser `nano` pour ce TP.
 Sous `nano` les raccourcis sont affichés en bas de l'écran, ce qui facilite
 grandement son utilisation ( par exemple `Ctrl + X` pour quitter ).
 
-De plus si vous faire défiler un fichier ( comme un `man` ), vous pouvez
+De plus si vous voulez faire défiler un fichier ( comme un `man` ), vous pouvez
 utiliser la commande `less`.
 
 ## Misc
@@ -243,13 +242,6 @@ On peut aussi télécharger un fichier depuis Web avec `curl URL`.
 Comme vous pouvez le voir si vous testez la commande
 `curl http://www.google.fr`, le contenu de la page s'affiche dans le terminal
 et non dans un fichier.
-
-Maintenant que vous savez utiliser `curl`, un flag se cache à l'URL suivante, à
-vous de le trouver !
-
-```
-http://ctf.bfor.ovh/curl
-```
 
 Petit bonus, si vous voulez regarder Star Wars IV vous pouvez taper:
 ```
@@ -369,6 +361,9 @@ En outre, `rate` et `paragraphes` correspondent tous deux au glob `*ar*`
 
 Par exemple, essayez d'afficher le nom de tous les fichiers commençant par `poul`
 dans le dossier `globbing`.
+
+Vous pouvez ensuite faire l'exercice `globiglob`. Le flag se trouve dans le
+fichier se terminant par `3s`.
 
 ## Processus
 
