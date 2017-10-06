@@ -1,9 +1,9 @@
 - Auteurs : BfoR, multun, flomonster
 
 ```
-$ wget http://transfer.guenezan.me/XXXXX/tp_linux.zip
-$ unzip tp_linux
+$ git clone https://github.com/bifore/tp_linux
 $ cd tp_linux
+$ ./update.sh
 ```
 
 | Exercice  | Nom                          |
