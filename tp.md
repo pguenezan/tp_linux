@@ -12,7 +12,7 @@ $ ./update.sh
 | niveau 2  | EXÉCUTION                    |
 | niveau 3  | Une œuvre d'AUTHORS          |
 | niveau 4  | À la recherche du flag perdu |
-| niveau 5  | On dit s'il vous plaît       |
+| niveau 5  | SVP                          |
 | niveau 6  | Tartiflette                  |
 | niveau 7  | Passe-passe                  |
 | niveau 8  | maknifique                   |
@@ -181,12 +181,15 @@ utiliser la commande `less`.
 
 Ce chapitre vise à découvrir un certain nombre de commandes relativement hétéroclites:
 
+- `touch` permet de creer un fichier.
 - `find .` permet de lister récursivement tous les fichiers d'un dossier.
 - `clear` permet d'effacer l'écran du terminal ( recommencer à la première
 ligne )
 - `cal` et `date` permet d'afficher le calendrier, la date et l'heure.
 - `grep RECHERCHE FICHIER` permet de faire une recherche dans un fichier (
  très utile ! )
+
+Utilisez `touch` pour réaliser l'exercice `Une Oeuvre d'AUTHORS`.
 
 Maintenant que vous savez utiliser `grep`, vous pouvez essayer de chercher le
 flag dans le dossier `flag_perdu`.
@@ -285,6 +288,7 @@ Par exemple:
  - `curl http://monurl/monfichier.tar.gz | tar t` télécharge le fichier à l'url
    spécifiée et liste son contenu.
 
+Maintenant vous pouvez chercher le `flag` dans l'exercice `tartiflette`.
 
 ## Le Shell
 
@@ -345,6 +349,8 @@ La ligne `Access` résume les permissions du fichier: `Access: (0644/-rw-r--r--)
 
 Dans cet exemple, le fichier est lisible et inscriptible pour son propriétaire,
 et lisible pour le reste des utilisateurs.
+
+Maintenant vous pouvez chercher le `flag` dans l'exercice `maknifique`.
 
 ## Globbing
 
@@ -407,6 +413,8 @@ ltrace MONPROGRAMME
 ```
 
 À vous d'observer ce qui s'y passe !
+
+Maintenant vous pouvez checher le `flag` dans `trace_me`.
 
 
 ## Gdb
