@@ -1,4 +1,4 @@
-- Authors : BfoR, Multun (§ Bash )
+- Auteurs : BfoR, multun, flomonster
 
 ```
 $ wget http://transfer.guenezan.me/XXXXX/tp_linux.zip
@@ -6,141 +6,171 @@ $ unzip tp_linux
 $ cd tp_linux
 ```
 
-## La superbe géniale magnifique documentation
+| Exercice  | Nom                          |
+|-----------|------------------------------|
+| niveau 1  | voyage voyage                |
+| niveau 2  | EXÉCUTION                    |
+| niveau 3  | Une œuvre d'AUTHEUR          |
+| niveau 4  | À la recherche du flag perdu |
+| niveau 5  | On dit s'il vous plaît       |
+| niveau 6  | Tartiflette                  |
+| niveau 7  | Curly                        |
+| niveau 8  | Passe-passe                  |
+| niveau 9  | maknifique                   |
+| niveau 10 | globiblob                    |
+| niveau 11 | Trace me                     |
+| niveau 42 | xorifiquement votre          |
 
-Si vous ne comprenez pas une commande, vous pouvez taper:
+
+## Un peu d'aide
+
+Si vous ne comprenez pas une commande, saisissez:
 
 ```
 $ man echo
 ```
-Le `$` indique que vous pouvez taper votre commande, si ce symbole n'est pas
-présent, cela signifie que votre dernière commande n'est pas terminée.
 
-De plus, si vous voulez interrompre la commande vous pouvez faire:
+Le `$` indique que vous pouvez saisir une commande. Si ce symbole ni aucun
+autre similaire n'est présent, la commande précédente n'est pas terminée.
+
+
+Pour interrompre la commande en cours, saisissez:
+
 ```
-Ctrl + c
+<Ctrl> + c
 ```
 
 ## i3
 
 Pour ce TP, nous allons utiliser `i3` qui est un gestionnaire de fenêtres.
-
 Pour lancer un terminal, il faut appuyer sur:
+
 ```
 <Mod> + Enter
 ```
+
 En fonction de ce que vous choisissez au démarrage de votre session, la touche
-<Mod>, sera la touche `Windows` ou la touche `Alt`.
+`<Mod>`, sera la touche `Windows` ou la touche `Alt`.
 
 Si vous voulez fermer votre fenêtre appuyer sur:
 ```
 <Mod> + Shift + q
 ```
 
-De plus, si vous voulez lancer un programme tapez:
+De plus, si vous voulez lancer un programme graphique tapez:
 ```
 <Mod> + d, puis tapez firefox par exemple
 ```
 
 Enfin, pour changer de bureau, tapez:
+
 ```
 <Mod> + le numéro du bureau
 ```
 
+Enfin, pour bouger une fenêtre vers un nouveau bureau, tapez:
+
+```
+<Mod> + <Shift> + le numéro du bureau
+```
+
+Enfin, pour réagancer les fenêtres, tapez:
+
+```
+<Mod> + <Shift> + <Arrows>
+```
+
+
 ## Dossiers et fichiers
 
-Comme nous avons maintenant un terminal ouvert, nous pouvons commencer.
+Comme nous avons maintenant un terminal, il est temps de commencer.
 
-Si vous voulez savoir où vous êtes dans le système de fichier tapez:
-```
-$ pwd
-```
+Un petit lexique des commandes utiles:
 
-Maintenant que nous savons où nous sommes, nous voulons connaitre les fichiers
-et les dossiers qui se trouvent là où nous sommes. Pour cela il faut faire:
-```
-$ ls
-```
+ - `pwd` permet d'afficher le chemin du dossier actuel.
+ - `ls' permet de lister les éléments du dossier actuel.
+ - `mkdir DOSSIER` permet de créer un dossier nommé "DOSSIER" dans le dossier courant.
+ - `rmdir DOSSIER` permet de supprimer un dossier vide.
+ - `touch FICHIER` permet de créer un fichier vide.
+ - `rm FICHIER` permet de supprimer un fichier.
+ - `tree` permet d'afficher l'arborescence liée au dossier courant.
+ - `mv` permet de déplacer / renommer un fichier ou dossier.
+ - `cat FICHIER` permet d'afficher le contenu d'un fichier. Sans arguments, sortez avec `<Ctrl> + d`.
+ - `curl https://une_url/` permet de télécharger un fichier à partir d'une URL. L'option
+   `-O` permet de sauvegarder le fichier dans le dossier courant.
+ - `echo chaton` permet d'afficher le texte `chaton`, suivi d'un retour à la ligne.
+ - `man` permet d'afficher la documentation d'une commande connue.
 
-Nous pouvont maintenant savoir où nous sommes et lister le contenu d'un dossier,
-mais on ne peut pas faire grand choses sans se déplacer dans le système de fichiers, pour cela tapez:
-```
-$ cd NOM_DU_DOSSIER
-```
-De plus si vous voulez revenir au dossier parent, tapez `cd ..`.
-
-Il est donc temps de passer au premier exercice, pour cela rendez-vous dans le dossier
-`tp_linux/exo1`.
-Votre mission, si vous l'acceptez... sera de récupérer le fichier `flag` qui
+Il est donc temps de passer au premier exercice ! Pour cela, rendez-vous dans le dossier
+`voyage_voyage`.
+Votre mission, si vous l'acceptez… sera de récupérer le fichier `flag` qui
 contient une clef que vous pouvez vérifier sur `http://ctf.bfor.ovh/`. Ce
-fichier se trouve quelque part dans l'arborescence du dossier `exo1`. Pour
-cet exercice vous aurez besoin de la commande `cat FICHIER` qui permet d'
-afficher le contenu d'un ficher.
+fichier se trouve quelque part dans l'arborescence du dossier `voyage_voyage`. Pour
+cet exercice vous aurez besoin de la commande `cat` qui permet d'
+afficher le contenu d'un fichier.
 
 Petit indice, certains dossiers ou fichiers peuvent être cachés si ils commencent par
 un `.` ( par exemple `.invisible` ). Cherchez bien :wink:
 
-Enfin si voulez créer un dossier, rien de plus simple, tapez:
-```
-$ mkdir NOM_DU_DOSSIER
-```
-De même, on peut créer un fichier avec la commande:
-```
-$ touch NOM_DU_FICHIER
+## Execution !
+
+Si un fichier<sup>[1](#f1)</sup> est exécutable, vous pouvez le lancer en spéficiant son chemin complet
+dans l'invite de commande. Par exemple, essayez de lancer `hello_world.sh`.
+
+Afin de pouvoir distinguer les programmes dans le dossier courrant de ceux installés
+ailles, il est nécessaire de spécifier le chemin relatif du dossier courrant.
+
+```sh
+./mon_programme
 ```
 
-## make
+Un autre flag se trouve dans le dossier `execution`. À vous de le trouver !
 
-Nous allons maintenant voir comment compiler un programme en C avec `make`.
-Pour compiler votre programme rien de plus simple, il suffit d'exécuter la
-commande `make` dans un dossier qui comporte le fichier `Makefile`.
-
-De plus si vous voulez exécuter votre fichier<sup>[1](#f1)</sup> exécutable, il
-suffit de faire:
-```
-$ ./NOM_DU_FICHIER
-```
-
-Maintenant que vous savez tout cela, un autre flag se trouve dans le dossier
-`exo2`. A vous de le trouver !
 
 ## Opérations sur les fichiers
 
 Nous savons désormais comment créer des dossiers et des fichiers, mais si l'on
 fait une erreur, nous ne pouvons pas la corriger.
 Pour supprimer un fichier ou un dossier, il suffit de faire:
+
 ```
 $ rm NOM_DU_FICHIER
 $ rmdir NOM_DU_DOSSIER
 ```
+
 De plus si vous voulez effacer un dossier et son contenu récursivement, il
 suffit d'ajouter l'option `-r` à la commande `rm`.
 
 Comme vous l'avez sans doute remarqué, vous ne pouvez pas faire `Ctrl + c,
 Ctrl + v`, pour copier un fichier. Pour copier un fichier sur linux, il faut
 taper:
+
 ```
 $ cp NOM_DU_FICHIER_SOURCE NOM_DU_NOUVEAU_FICHIER
 ```
+
 Le déplacement d'un fichier s'effectue exactement de la même façon mais avec la
 commande `mv`. De plus, renommer un fichier équivaut à le déplacer.
 
 ## Afficher un fichier
 
 Nous savons déjà comment afficher un fichier avec la commande `cat`, mais nous
-avons un petit problème. Si nous avons un fichier de 42k lignes et que nous
+avons un petit problème. Si nous avons un fichier de 42 mille lignes et que nous
 voulons regarder les 15 premières ou dernière lignes d'un fichier, nous n'allons
-pas l'afficher en entier. Pour cela nous pouvons faire:
+pas l'afficher en entier. Pour cela il est possible d'utiliser:
+
 ```
-$ head -n 15 NOM_DU_FICHIER
-$ tail -n 15 NOM_DU_FICHIER
+$ head -n 15 FICHIER
+$ tail -n 15 FICHIER
 ```
-Je vous laisse deviner laquelle affiche les dernières lignes<sup>[2](#f2)
+
+À vous de deviner laquelle affiche les dernières lignes<sup>[2](#f2)
 </sup>et laquelle affiche les premières lignes :worried:
 
-Il existe plusieurs éditeurs très puissants tels que `vim` et `emacs`, mais ils
-sont assez difficiles à utiliser pour un débutant. Je conseille donc d'utiliser
-`nano` pour ce TP.
+
+Plusieurs éditeurs avancés tels que `vim` et `emacs` sont disponibles, mais de
+prise en main relativement difficile. Si vous n'êtes pas familier avec ces outils,
+vous pouvez utiliser `nano` pour ce TP.
 
 Sous `nano` les raccourcis sont affichés en bas de l'écran, ce qui facilite
 grandement son utilisation ( par exemple `Ctrl + X` pour quitter ).
@@ -150,20 +180,21 @@ utiliser la commande `less`.
 
 ## Misc
 
-Dans ce chapitre, nous allons voir beaucoup de commandes hétéroclites:
+Ce chapitre vise à découvrir un certain nombre de commandes relativement hétéroclites:
 
 - `find .` permet de lister récursivement tous les fichiers d'un dossier.
 - `clear` permet d'effacer l'écran du terminal ( recommencer à la première
 ligne )
 - `cal` et `date` permet d'afficher le calendrier, la date et l'heure.
-- `grep REGEX NOM_DU_FICHIER` permet de faire une recherche dans un fichier (
+- `grep RECHERCHE FICHIER` permet de faire une recherche dans un fichier (
  très utile ! )
 
 Maintenant que vous savez utiliser `grep`, vous pouvez essayer de chercher le
-flag dans le dossier `exo3`.
+flag dans le dossier `flag_perdu`.
 
 Petit indice, si vous voulez chercher le mot `sapin` du fichier `ours` il
 faut taper la commande:
+
 ```
 $ grep sapin ours
 ```
@@ -174,18 +205,22 @@ La commande `du` permet de connaitre la taille d'un fichier ( vous pouvez
 ajouter l'option `-h` à de nombreuses commandes dont `du` pour rendre la sortie
 plus lisible )
 
-Comme vous l'avez sans doute vu durant la conférence, chaque fichier appartient à un utilisateur,
-pour changer le propriétaire d'un fichier, il suffit de faire:
+Comme vous l'avez sans doute constaté lors de la conférence, chaque fichier
+appartient à un utilisateur. Pour changer le propriétaire d'un fichier, faites:
+
 ```
 $ chown UTILISATEUR:GROUPE NOM_DU_FICHIER
 ```
-De plus si vous voulez changer les permissions d'un fichier, il faut faire:
+
+En outre, pour modifier les permissions d'un fichier, faites:
+
 ```
 $ chmod XXX NOM_DU_FICHIER
 ```
+
 Un petit rappel sur les permissions numériques : le premier chiffre est la
-permission de l'utilisateur, le deuxième pour le groupe et le dernier pour tout
-le monde. Le différentes valeurs possible sont:
+permission de l'utilisateur, le deuxième celui du groupe et le dernier celui
+des autres. Les différentes valeurs possible sont:
 
 | Droit                 | Valeur alphanumérique | Valeur octale |
 |-----------------------|:---------------------:|:-------------:|
@@ -198,10 +233,68 @@ le monde. Le différentes valeurs possible sont:
 | lecture et écriture   | `rw-`                 | `6`           |
 | tous les droits       | `rwx`                 | `7`           |
 
-Maintenant que vous maitrisez à la prefection les permissions, un flag se cache
-dans le dossier `exo4`. A vous de jouer !
+Maintenant que vous maitrisez à la perfection les permissions, un flag se cache
+dans le dossier `svp`. A vous de jouer !
 
-## Bash
+
+## Réseau
+
+On peut aussi télécharger un fichier depuis Web avec `curl URL`.
+Comme vous pouvez le voir si vous testez la commande
+`curl http://www.google.fr`, le contenu de la page s'affiche dans le terminal
+et non dans un fichier.
+
+Maintenant que vous savez utiliser `curl`, un flag se cache à l'URL suivante, à
+vous de le trouver !
+
+```
+http://ctf.bfor.ovh/curl
+```
+
+Petit bonus, si vous voulez regarder Star Wars IV vous pouvez taper:
+```
+$ telnet towel.blinkenlights.nl
+```
+
+
+## tar
+
+À la manière de `7zip`, `tar` est un outil d'archivage.
+
+Il permet de regrouper des fichiers, puis de les compresser à l'aide de différents
+algorithmes.
+
+Par convention, un fichier `.tar` contiendra plusieurs fichiers regroupés, et un
+fichier `.tar.gz` sera des fichiers regroupés puis compressés selon l'algorithme
+`gzip`. Cet outil permet également d'utiliser un panel d'algorithmes différents.
+
+Afin de dicter sa conduite, `tar` accepte deux catégorie d'arguments:
+
+ - ceux dictant l'opération à effectuer:
+   - `c` comme concaténer (mettre bout à bout)
+   - `x` comme extraire
+   - `t` pour lister
+ - ceux spécifiant la compression:
+   - `z` comme `gzip`
+   - `j` pour `bzip2`
+   …
+
+Par défaut, tar affiche ou lis le sujet de son opérations, ce qui se révèle souvent
+être une mauvaise idée.
+
+Si l'argument `f` est passé à `tar`, un fichier sera lu ou écrit à la place.
+
+Par exemple:
+ - `tar xf MONFICHIER` décompresse un fichier (tar devine lui-même quelle
+   compression est utilisée).
+ - `tar xzf MONFICHIER FICHIER1 DOSSIER1` met dans l'archive `MONFICHIER` les
+   éléments qui suivent.
+ - `tar tf MONFICHIER` liste les éléments présents dans `MONFICHIER`
+ - `curl http://monurl/monfichier.tar.gz | tar t` télécharge le fichier à l'url
+   spécifiée et liste son contenu.
+
+
+## Le Shell
 
 Le Shell est un langage de programmation comme les autres, dont l'apprentissage
 ne constitue pas le coeur de ce TP. Toutefois, certaines de ses fonctionnalités
@@ -213,99 +306,139 @@ au lancement d'un programme.
 
 Les programmes, comme les fonctions, disposent d'arguments. Les arguments des
 programmes sous linux sont exclusivement textuels.
-Par exemple, le programme le plus basique imaginable serait `echo`, qui affiche
-ses arguments.
+Par exemple, un programme basique serait `echo`, qui affiche ses arguments.
 
 Vous pouvez afficher le texte `Hello, World!` en saisissant `echo "Hello,
 World!"`.
-
-Une des autres capacités intéressantes de ce langage réside dans sa capacité à
-compléter les noms de fichiers.
-Écrire `echo poul*` affichera le nom de tous les fichiers commençant par `poul`
-Vous pouvez tester dans le dossier `globbing`.
 
 Vous pouvez également attribuer une valeur à une variable grâce à la syntaxe
 `VARIABLE="Valeur"`. Affichez ensuite le contenu de la variable avec `echo
 $VARIABLE`.
 
-Ce qui fait la réelle puissance de ce langage, c'est sa capacité à combiner les
+Un des éléments intéressants de ce langage serait sa capacité à composer les
 résultats des programmes appelés.
-Par exemple, vous pouvez écrire le texte `coucou` dans un fichier grâce un
-programme `echo "coucou" > NOM_DU_FICHIER`. Comme vous pouvez le voir,
-l'opérateur `>` permet de rediriger ce qui s'affiche dans le terminal dans un
-fichier.
+
+Par exemple, vous pouvez écrire le texte `coucou` dans un fichier grâce à
+l'expression `echo "coucou" > NOM_DU_FICHIER`. En effet, l'opérateur `>` permet
+de rediriger ce qui s'afficherait dans le terminal dans un fichier.
 
 De la même façon, l'opérateur `|` ( pipe ), permet de rediriger la sortie du
 programme à gauche du pipe, dans l'entrée du programme à droite du pipe. Par
 exemple la commande `ls | grep .c` permet de filtrer la sortie de `ls` avec la
-commande `grep` donc afficher tout les fichiers C du dossier.
+commande `grep` donc afficher tout les fichiers dont le nom contient `.c` du
+dossier.
 
-Un autre flag se trouve dans le dossier `exo5`, pour le trouver il faut transmettrer
+Un autre flag se trouve dans le dossier `passe_passe`, pour le trouver il faut transmettre
 la clef à un programme flag. Bonne chance !
+
+
+## make
+
+Make est un programme conçu pour créer un fichier à partir d'une liste de d'autres
+fichiers nécessaires à sa création.
+
+make est par défaut capable de transformer une grande variété de types
+de fichiers, dont les fichiers `.c`.
+
+Par exemple, si un fichier `test.c` existe, saisissez `make test` pour instruire à
+make de compiler le programme.
+
+En plus de ces règles implicites, il est possible d'instruire à make comment
+construire un type de fichier, à l'aide d'un fichier `Makefile'.
+
+Une fois un programme compilé, pourquoi ne pas l'exécuter ?
+
+Vous pouvez vérifier que votre programme est exécutable avec `stat FICHIER`,
+La ligne `Access` résume les permissions du fichier: `Access: (0644/-rw-r--r--)`
+
+Dans cet exemple, le fichier est lisible et inscriptible pour son propriétaire,
+et lisible pour le reste des utilisateurs.
+
+## Globbing
+
+Une autre fonctionnalité du langage shell est de pouvoir tirer d'une expression
+représentant une règle tous les fichiers la respectant. Ces expressions sont
+appellées globs.
+
+Le charactère `*` correspond à une suite de charactères quelconques, et le caractère
+'?' correspond à un unique charactère.
+
+Par exemple, les fichiers `patate` et `late` correspondent tous deux au glob `*ate`.
+
+En outre, `rate` et `paragraphes` correspondent tous deux au glob `*ar*`
+
+Par exemple, essayez d'afficher le nom de tous les fichiers commençant par `poul`
+dans le dossier `globbing`.
 
 ## Processus
 
-Un processus est un programme en cours d'exécution.
+Un processus est un programme en cours d'exécution. Sauf exception, les commandes que
+vous saisissez aboutissent au lancement d'un nouveau programme, qui peut à son tour
+interagir avec vous.
 
-Pour lister les processus, vous pouvez faire la commande `top` ou `htop` (
+Pour lister les processus, vous pouvez utiliser la commande `top` ou `htop` (
 utilisez celui que vous souhaitez ).
 
-Enfin si vous voulez stopper l'excution d'un processus vous pouvez faire:
+Enfin si vous voulez stopper l'excution d'un processus vous pouvez saisir:
+
 ```
 $ pkill NOM_DU_PROCESSUS
 ```
+
+Par exemple, lancez la commande `cat` dans un terminal, et essayer de l'arrêter dans
+interagir avec celui-ci.
+
+
+### Bibliothèques partagées et appels système
+
+Les processus sont capables d'en appeller au système ou à du code externe pour effectuer
+des opérations diverses.
+
+Deux outils sont à votre disposition pour observer ce phénomène:
+
+ - `ltrace` observe les appels a des bibliothèques partagées
+ - `strace` observe les appels système
+
+Pour inspecter les actions d'un programme, faites
+
+```
+strace MONPROGRAMME
+```
+
+OU
+
+```
+ltrace MONPROGRAMME
+```
+
+À vous d'observer ce qui s'y passe !
+
+
+## Gdb
+
+À la manière d'`strace` ou `ltrace`, `gdb` permet d'observer le comportement
+d'un programme avec plus de minutie, mais aussi de l'altérer.
+
+
+
 
 ## Sytème de fichiers
 
 Si vous voulez connaitre la taille et l'espace restant des systèmes de fichiers
 montés, vous pouvez faire:
+
 ```
 $ df
 ```
 
-De plus si vous voulez monter ( ajouter ) des systèmes de fichiers, il faut
-faire:
-```
-$ mount /dev/NOM_DU_FS CHEMIN
-```
-Si vous voulez qu'un système de fichier ne soit plus accessible, vous le
-démontez avec la commande:
-```
-$ umount CHEMIN
-```
-
-## Réseau
-
-Si vous voulez tester votre connexion avec la commande `ping IP_ADDRESS`, on
-utilise souvent le serveur DNS de Google ( `8.8.8.8` ) pour tester sa connexion.
-
-On peut aussi télécharger un fichier depuis Web avec `curl URL`.
-Comme vous pouvez le voir si vous testez la commande
-`curl http://www.google.fr`, le contenu de la page s'affiche dans le terminal
-et non dans un fichier. Pour sauvegarder un fichier et non l'afficher il faut
-utiliser `wget`.
-
-Maintenant que vous savez utiliser `curl`, un flag se cache à l'URL suivant, à
-vous de le trouver !
-```
-http://ctf.bfor.ovh/curl
-```
-
-Petit bonus, si vous voulez regarder Star Wars IV vous pouvez taper:
-```
-$ telnet towel.blinkenlights.nl
-```
-
-## The end of the line
+## La Fin.
 
 Le TP touche maintenant à sa fin, si vous voulez arrêter votre machine, il faut
 faire:
+
 ```
-shutdown now
+poweroff
 ```
-Enfin si vous voulez redémarer votre machine il faut taper `reboot`, si vous
-voulez quitter un terminal, entrer la commande `exit` ou `Ctrl + d` ( seulement
-si le prompt est vide ).
 
 <br>
 <br>
