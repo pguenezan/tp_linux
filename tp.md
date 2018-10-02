@@ -1,9 +1,8 @@
 - Auteurs : BfoR, multun, flomonster
 
 ```
-$ git clone https://github.com/bifore/tp_linux
+$ curl http://t.bfor.fr/tp_linux.tar | tar xf -
 $ cd tp_linux
-$ ./update.sh
 ```
 
 | Exercice  | Nom                          |
@@ -30,7 +29,8 @@ $ man echo
 ```
 
 Le `$` indique que vous pouvez saisir une commande. Si ce symbole ni aucun
-autre similaire n'est présent, la commande précédente n'est pas terminée.
+autre similaire n'est présent, la commande précédente n'est pas terminée. Si
+vous voulez quitter un page de `man`, vous pouvez appuyer sur le touche `q`.
 
 
 Pour interrompre la commande en cours, saisissez:
@@ -86,6 +86,7 @@ Comme nous avons maintenant un terminal, il est temps de commencer.
 
 Un petit lexique des commandes utiles:
 
+ - `cd` permet de changer de dossier.
  - `pwd` permet d'afficher le chemin du dossier actuel.
  - `ls` permet de lister les éléments du dossier actuel.
  - `mkdir DOSSIER` permet de créer un dossier nommé "DOSSIER" dans le dossier courant.
@@ -103,7 +104,7 @@ Un petit lexique des commandes utiles:
 Il est donc temps de passer au premier exercice ! Pour cela, rendez-vous dans le dossier
 `voyage_voyage`.
 Votre mission, si vous l'acceptez… sera de récupérer le fichier `flag` qui
-contient une clef que vous pouvez vérifier sur `http://ctf.bfor.ovh/`. Ce
+contient une clef que vous pouvez vérifier sur `http://ctf.bfor.fr/`. Ce
 fichier se trouve quelque part dans l'arborescence du dossier `voyage_voyage`. Pour
 cet exercice vous aurez besoin de la commande `cat` qui permet d'
 afficher le contenu d'un fichier.
