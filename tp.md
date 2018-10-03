@@ -1,7 +1,7 @@
 - Auteurs : BfoR, multun, flomonster
 
 ```
-$ curl http://t.bfor.fr/tp_linux.tar | tar xf -
+$ curl http://t.bfor.fr/tp_linux.tar | tar xzf -
 $ cd tp_linux
 ```
 
